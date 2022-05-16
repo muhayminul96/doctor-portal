@@ -31,7 +31,7 @@ const Contact = () => {
           placeholder="Your message"
           rows={6}
         ></textarea>
-                <button class="btn btn-primary uppercase font-bold text-white bg-gradient-to-r from-secondary to-primary">
+        <button className="btn btn-primary uppercase font-bold text-white bg-gradient-to-r from-secondary to-primary">
           Submit
         </button>
       </div>

@@ -4,9 +4,10 @@ import appoinment from "../../assets/images/appointment.png";
 
 const MakeApponment = () => {
   return (
-    <div 
-    style={{background:`url(${appoinment})`}}
-    className="flex justify-center items-center">
+    <div
+      style={{ background: `url(${appoinment})` }}
+      className="flex justify-center items-center"
+    >
       <div className="flex-1 mt-[-120px] hidden lg:block">
         <img src={doctor} alt="" />
       </div>
@@ -21,7 +22,7 @@ const MakeApponment = () => {
           look like readable English. Many desktop publishing packages and web
           page
         </p>
-        <button class="btn btn-primary uppercase font-bold text-white bg-gradient-to-r from-secondary to-primary">
+        <button className="btn btn-primary uppercase font-bold text-white bg-gradient-to-r from-secondary to-primary">
           Get Started
         </button>
       </div>
