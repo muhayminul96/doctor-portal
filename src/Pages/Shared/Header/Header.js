@@ -29,7 +29,10 @@ const Header = () => {
       </li>
       <li>
         {user ? (
+          <>
+          <Link to="/dashboard">Dashboard </Link>
           <p onClick={() => signOut(auth)}>Log Out</p>
+          </>
         ) : (
           <Link to="/login">Login</Link>
         )}
