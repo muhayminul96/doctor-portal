@@ -31,7 +31,11 @@ const Header = () => {
         {user ? (
           <>
           <Link to="/dashboard">Dashboard </Link>
-          <p onClick={() => signOut(auth)}>Log Out</p>
+          <p onClick={() => {
+            signOut(auth)
+            localStorage.removeItem('accessToken')
+          
+          }}>Log Out</p>
           </>
         ) : (
           <Link to="/login">Login</Link>
