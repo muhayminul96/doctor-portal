@@ -5,7 +5,7 @@ import auth from "../../firebase.init";
 import Loading from "../Shared/Loading";
 import { toast } from "react-toastify";
 
-const BookingModal = ({ date, treatment, setTreatment ,refetch }) => {
+const BookingModal = ({ date, treatment, setTreatment, refetch }) => {
   const { _id, name, slots } = treatment;
   const [user, loading, error] = useAuthState(auth);
   if (loading) {
@@ -26,7 +26,7 @@ const BookingModal = ({ date, treatment, setTreatment ,refetch }) => {
       phone: event.target.phone.value,
     };
 
-    fetch("http://localhost:5000/booking", {
+    fetch("https://frozen-scrubland-87457.herokuapp.com/booking", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -43,8 +43,7 @@ const BookingModal = ({ date, treatment, setTreatment ,refetch }) => {
           );
         }
         setTreatment(null);
-        refetch()
-
+        refetch();
       });
 
     // to close the modal
