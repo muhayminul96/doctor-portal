@@ -8,15 +8,15 @@ import Appointment from "../src/Pages/Appointment/Appointment";
 import Login from "./Pages/Login/Login";
 import Signup from "./Pages/Login/SignUp";
 import RequireAuth from "./Pages/Login/RequireAuth";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import Dashboard from './Pages/Dashboard/Dashboard'
-import MyAppointments from './Pages/Dashboard/MyAppointments'
-import MyReview from './Pages/Dashboard/MyReview'
-import MyHistory from './Pages/Dashboard/MyHistory'
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Dashboard from "./Pages/Dashboard/Dashboard";
+import MyAppointments from "./Pages/Dashboard/MyAppointments";
+import MyReview from "./Pages/Dashboard/MyReview";
+import MyHistory from "./Pages/Dashboard/MyHistory";
 import Users from "./Pages/Dashboard/Users";
 import RequireAdmin from "./Pages/Login/RequireAdmin";
-
+import AddDoctor from "./Pages/Dashboard/AddDoctor";
 
 function App() {
   return (
@@ -42,11 +42,24 @@ function App() {
           }
         >
           <Route index element={<MyAppointments />} />
-        <Route path="review" element={<MyReview />} />
-        <Route path="history" element={<MyHistory />} />
-        <Route path="users" element={
-          <RequireAdmin><Users></Users></RequireAdmin>
-        } />
+          <Route path="review" element={<MyReview />} />
+          <Route path="history" element={<MyHistory />} />
+          <Route
+            path="users"
+            element={
+              <RequireAdmin>
+                <Users></Users>
+              </RequireAdmin>
+            }
+          />
+          <Route
+            path="adddoctor"
+            element={
+              <RequireAdmin>
+                <AddDoctor></AddDoctor>
+              </RequireAdmin>
+            }
+          />
         </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />

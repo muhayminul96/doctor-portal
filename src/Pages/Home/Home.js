@@ -10,7 +10,6 @@ import Testimonials from "./Testimonials";
 const Home = () => {
   return (
     <div className=" px-12">
-      <p> this is home </p>
       <Banner></Banner>
       <Info></Info>
       <Services></Services>
